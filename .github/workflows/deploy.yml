@@ -1,31 +1,20 @@
-name: Deploy to Heroku
+name: Deploy to Render
 
 on:
   push:
     branches:
-      - main
+      - main  
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Render Deploy
+        uses: render-examples/render-deploy@v1.0.0
         with:
-          python-version: '3.9'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Deploy to Heroku
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        run: |
-          heroku login
-          git push heroku main
+          render_api_key: ${{ secrets.RENDER_API_KEY }}  
+          service_id: srv-cskdqojtq21c73dmtjr0 
