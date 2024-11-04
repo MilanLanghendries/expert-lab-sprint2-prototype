@@ -1,10 +1,10 @@
-name: My Python Action
-description: Logt een bericht naar de console
+name: 'My Python Action'
+description: 'A simple action that runs a Python script'
 inputs:
-  message:
-    description: 'Het bericht om te loggen'
-    required: true
-    default: 'Hello from Python Action!'
+  example_input:
+    description: 'An example input'
+    required: false
+    default: 'Hello World'
 runs:
   using: 'python'
   main: 'main.py'
