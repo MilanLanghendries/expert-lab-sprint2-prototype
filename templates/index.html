@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App with GitHub Actions</title>
+    <script>
+      async function showMessage() {
+        const response = await fetch('/api/message');
+        const data = await response.json();
+        document.getElementById('message').innerText = data.message;
+      }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Flask App with GitHub Actions!</h1>
+    <p>This is a simple site with deployment automation using GitHub Actions.</p>
+    <button onclick="showMessage()">Get a Random Message</button>
+    <p id="message"></p>
+</body>
+</html>

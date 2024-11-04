@@ -1,0 +1,9 @@
+import sys
+import os
+
+def main():
+    message = os.getenv("INPUT_MESSAGE")
+    print(f"My Python Action says: {message}")
+
+if __name__ == "__main__":
+    main()
