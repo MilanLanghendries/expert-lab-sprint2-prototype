@@ -9,4 +9,5 @@ runs:
   using: "composite"
   steps:
     - name: Greet User
+      shell: bash
       run: echo "Hello, ${{ inputs.name }}!"
