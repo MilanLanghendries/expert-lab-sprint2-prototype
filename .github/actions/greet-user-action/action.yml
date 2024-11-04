@@ -1,9 +1,10 @@
-name: 'Greet User Action'
-description: 'A custom action to greet the user using Python.'
+name: "Greet User"
+description: "A GitHub Action that greets the user"
 inputs:
   name:
-    description: 'The name of the user to greet.'
+    description: "Name of the user"
     required: true
+    default: "GitHub User"
 runs:
-  using: 'python'
-  main: 'main.py'
+  using: "docker"
+  image: "Dockerfile"  

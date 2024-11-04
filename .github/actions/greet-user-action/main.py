@@ -1,8 +1,8 @@
 import os
 
 def main():
-    name = os.getenv('INPUT_NAME')  # Get the input from the GitHub Action
-    print(f"Hello, {name}!")
+    name = os.getenv('INPUT_NAME', 'GitHub User')
+    print(f"Hello, {name}! Welcome to the repository!")
 
 if __name__ == "__main__":
     main()
