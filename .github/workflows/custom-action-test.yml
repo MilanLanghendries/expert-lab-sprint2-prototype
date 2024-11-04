@@ -1,15 +1,22 @@
-name: Test Custom Python Action
+name: Test Custom Action
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  test_custom_python_action:
+  test:
     runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
 
-      - name: Run custom Python action
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run My Python Action
         uses: ./.github/actions/my-python-action
         with:
-          message: 'Hello from the custom Python action!'
+          example_input: 'Test input for my action'
