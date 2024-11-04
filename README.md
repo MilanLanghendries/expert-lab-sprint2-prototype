@@ -11,9 +11,8 @@ This is a simple Flask web application that serves a greeting page. The applicat
   - [Testing](#testing)
   - [Deployment](#deployment)
   - [Custom Action](#custom-action)
-- [Directory Structure](#directory-structure)
+- [Documention](#documentation)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
