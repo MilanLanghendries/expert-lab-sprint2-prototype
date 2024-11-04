@@ -1,10 +1,12 @@
 name: "Greet User"
-description: "A GitHub Action that greets the user"
+description: "A simple action to greet a user."
 inputs:
   name:
-    description: "Name of the user"
+    description: "The name of the user to greet"
     required: true
-    default: "GitHub User"
+    default: "World"
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: "composite"
+  steps:
+    - name: Greet User
+      run: echo "Hello, ${{ inputs.name }}!"
