@@ -7,4 +7,4 @@ inputs:
     default: "GitHub User"
 runs:
   using: "docker"
-  image: "Dockerfile"  
+  image: "Dockerfile"
