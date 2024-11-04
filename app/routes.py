@@ -1,9 +1,9 @@
-from flask import Blueprint, render_template, jsonify
+from flask import render_template, Blueprint, jsonify
 import random
 
-main = Blueprint("main", __name__)
+main = Blueprint('main', __name__)
 
-@main.route("/")
+@main.route('/')
 def home():
     return render_template("index.html")
 
