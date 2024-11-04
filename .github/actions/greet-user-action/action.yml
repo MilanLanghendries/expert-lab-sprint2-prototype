@@ -1,0 +1,9 @@
+name: 'Greet User Action'
+description: 'A custom action to greet the user using Python.'
+inputs:
+  name:
+    description: 'The name of the user to greet.'
+    required: true
+runs:
+  using: 'python'
+  main: 'main.py'

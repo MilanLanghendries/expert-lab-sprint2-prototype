@@ -1,0 +1,19 @@
+name: Greet User Workflow
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Greet User
+        uses: ./.github/actions/greet-user-action
+        with:
+          name: 'GitHub User' 
